@@ -1,0 +1,88 @@
+/* 1. The Gradient Background */
+body {
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    color: white;
+}
+
+/* 2. The Keyboard Container (Glass effect) */
+.container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* 3. The Input Area */
+.input-area {
+    margin-bottom: 25px;
+}
+
+#input {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px solid #4ecca3;
+    border-radius: 10px;
+    color: #4ecca3;
+    text-align: center;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* 4. Keyboard Rows */
+.keyboard {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* 5. The Keys */
+.key {
+    min-width: 50px;
+    height: 55px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Hover Effect */
+.key:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* THE ACTIVE STATE (When pressed) */
+.key:active, .key.active {
+    background: #4ecca3; /* Neon Green */
+    color: #1a1a2e;
+    transform: translateY(4px);
+    box-shadow: 0 0 15px #4ecca3;
+}
+
+/* Special widths for large keys */
+[data-key="Space"] {
+    width: 300px;
+}
+
+[data-key="Backspace"], [data-key="shift"] {
+    width: 100px;
+    background: rgba(233, 69, 96, 0.2); /* Reddish tint */
+}

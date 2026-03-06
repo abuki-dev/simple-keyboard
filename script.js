@@ -47,7 +47,7 @@ window.addEventListener("keydown", (AA) => {
     
     if (pressedButton) {
         pressedButton.click(); // This "fake clicks" your button!
+        pressedButton.classList.add('active'); // Turn on the glow
+        setTimeout(() => pressedButton.classList.remove('active'), 150); // Turn it off after 150ms
     }
 });
-pressedButton.classList.add('active'); // Turn on the glow
-setTimeout(() => pressedButton.classList.remove('active'), 150); // Turn it off after 150ms

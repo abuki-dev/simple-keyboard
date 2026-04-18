@@ -7,50 +7,55 @@
     <title>keyboard</title>
 </head>
 <body>
+    <canvas id="particles"></canvas>
     <div class="container">
-    <div class="input-area">
-        <textarea type="text" id="input" placeholder="Type here..." readonly></textarea>
-    </div>  
-    <div class="keyboard">
-        <button  class="key" data-key="KeyQ">Q</button>
-        <button class="key" data-key="KeyW">W</button>
-        <button class="key" data-key="KeyE">E</button>
-        <button class="key" data-key="KeyR">R</button>
-        <button class="key" data-key="KeyT">T</button>
-        <button class="key" data-key="KeyY">Y</button>
-        <button class="key" data-key="KeyU">U</button>
-        <button class="key" data-key="KeyI">I</button>
-        <button class="key" data-key="KeyO">O</button>
-        <button class="key" data-key="KeyP">P</button>
+        <div class="kb-title">Neural Keyboard v1</div>
+        <div class="input-area">
+            <button class="scroll-btn" id="scrollUp">▲</button>
+            <textarea id="input" placeholder="Start typing..." readonly></textarea>
+            <button class="scroll-btn" id="scrollDown">▼</button>
+        </div>
+        <div class="caps-indicator"><div class="caps-dot" id="capsDot"></div></div>
+        <div class="keyboard">
+            <button class="key" data-key="KeyQ">Q</button>
+            <button class="key" data-key="KeyW">W</button>
+            <button class="key" data-key="KeyE">E</button>
+            <button class="key" data-key="KeyR">R</button>
+            <button class="key" data-key="KeyT">T</button>
+            <button class="key" data-key="KeyY">Y</button>
+            <button class="key" data-key="KeyU">U</button>
+            <button class="key" data-key="KeyI">I</button>
+            <button class="key" data-key="KeyO">O</button>
+            <button class="key" data-key="KeyP">P</button>
+        </div>
+        <div class="keyboard">
+            <button class="key" data-key="KeyA">A</button>
+            <button class="key" data-key="KeyS">S</button>
+            <button class="key" data-key="KeyD">D</button>
+            <button class="key" data-key="KeyF">F</button>
+            <button class="key" data-key="KeyG">G</button>
+            <button class="key" data-key="KeyH">H</button>
+            <button class="key" data-key="KeyJ">J</button>
+            <button class="key" data-key="KeyK">K</button>
+            <button class="key" data-key="KeyL">L</button>
+        </div>
+        <div class="keyboard">
+            <button class="key" data-key="ShiftLeft">Shift</button>
+            <button class="key" data-key="KeyZ">Z</button>
+            <button class="key" data-key="KeyX">X</button>
+            <button class="key" data-key="KeyC">C</button>
+            <button class="key" data-key="KeyV">V</button>
+            <button class="key" data-key="KeyB">B</button>
+            <button class="key" data-key="KeyN">N</button>
+            <button class="key" data-key="KeyM">M</button>
+            <button class="key" data-key="Backspace">⌫ Del</button>
+        </div>
+        <div class="keyboard">
+            <button class="key" data-key="Comma">,</button>
+            <button class="key" data-key="Space">SPACE</button>
+            <button class="key" data-key="Period">.</button>
+        </div>
     </div>
-    <div class="keyboard">
-        <button class="key" data-key="KeyA">A</button>
-        <button class="key" data-key="KeyS">S</button>
-        <button class="key" data-key="KeyD">D</button>
-        <button class="key" data-key="KeyF">F</button>
-        <button class="key" data-key="KeyG">G</button>
-        <button class="key" data-key="KeyH">H</button>
-        <button class="key" data-key="KeyJ">J</button>
-        <button class="key" data-key="KeyK">K</button>
-        <button class="key" data-key="KeyL">L</button>
-    </div>
-    <div class="keyboard">
-        <button class="key" data-key="ShiftLeft">Shift</button>
-        <button class="key" data-key="KeyZ">Z</button>
-        <button class="key" data-key="KeyX">X</button>
-        <button class="key" data-key="KeyC">C</button>
-        <button class="key" data-key="KeyV">V</button>
-        <button class="key" data-key="KeyB">B</button>
-        <button class="key" data-key="KeyN">N</button>
-        <button class="key" data-key="KeyM">M</button>
-        <button class="key" data-key="Backspace">Backspace</button>
-    </div>
-    <div class="keyboard">
-        <button class="key" data-key="Comma">,</button>
-        <button class="key" data-key="Space">Space</button>
-        <button class="key" data-key="Period">.</button>
-    </div>
-</div>
     <script type="module" src="script.js"></script>
 </body>
 </html>

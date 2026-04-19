@@ -29,7 +29,7 @@ function toLower() {
     isUpper = false;
     updateCapsIndicator();
     buttons.forEach(btn => {
-        if (!["Space", "⌫ Del", "Shift", "shift", ",", "."].includes(btn.innerText)) {
+        if (!["Space", "⌫ Del","shift", ",", "."].includes(btn.innerText)) {
             btn.innerText = btn.innerText.toLowerCase();
         }
     });
@@ -39,7 +39,7 @@ function toUpper() {
     isUpper = true;
     updateCapsIndicator();
     buttons.forEach(btn => {
-        if (!["Space", "⌫ Del", "Shift", "shift", ",", "."].includes(btn.innerText)) {
+        if (!["Space", "⌫ Del", "SHIFT",  ",", "."].includes(btn.innerText)) {
             btn.innerText = btn.innerText.toUpperCase();
         }
     });
@@ -116,13 +116,13 @@ function pressKey(btn, e) {
     const cx = rect.left + rect.width / 2;
     const cy = rect.top + rect.height / 2;
 
-    if (text === "Space") {
+    if (text === "space"||text==="SPACE") {
         display.value += " ";
         spawnParticles(cx, cy, "#4ecca3");
     } else if (text === "⌫ Del") {
         display.value = display.value.slice(0, -1);
         spawnParticles(cx, cy, "#e94560");
-    } else if (text === "Shift") {
+    } else if (text === "SHIFT") {
         toLower();
         spawnParticles(cx, cy, "#6464ff");
     } else if (text === "shift") {
